@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Hanken";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+body {
+  font-family: "Hanken", Fallback, sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.wrapper {
+  min-width: 375px;
+  max-height: 809px;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    width: fit-content;
+    box-shadow: 0px 0.5px 50px hsl(220, 15%, 80%);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(221, 100%, 96%);
+  gap: 1.4rem;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+  .heading {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 265px;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+.result {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(241, 100%, 89%);
+}
+
+.average {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+@media screen and (min-width: 1024px) {
+  .average {
+    width: 165px;
+    height: 165px;
+  }
+}
+
+.average p:nth-child(odd) {
+  font-size: 54px;
+  font-weight: 800;
+}
+.average p:nth-child(even) {
+  color: hsl(241, 100%, 89%);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .description {
+    gap: 1rem;
+  }
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.text {
+  text-align: center;
+  width: 30ch;
+  color: hsl(241, 100%, 89%);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .text {
+    width: 25ch;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 265px;
+    padding: 2rem;
+  }
+}
+
+.summary {
+  font-weight: 700;
+  font-size: 20px;
+  color: hsl(224, 30%, 27%);
+}
+
+div[data-type="red"] {
+  --color: hsl(0, 100%, 67%);
+  --bgColor: hsl(0, 100%, 67%, 5%);
+}
+div[data-type="yellow"] {
+  --color: hsl(39, 100%, 56%);
+  --bgColor: hsl(39, 100%, 56%, 5%);
+}
+div[data-type="green"] {
+  --color: hsl(166, 100%, 37%);
+  --bgColor: hsl(166, 100%, 37%, 5%);
+}
+div[data-type="blue"] {
+  --color: hsl(234, 85%, 45%);
+  --bgColor: hsl(234, 85%, 45%, 5%);
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.category {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bgColor);
+  border-radius: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .category {
+    padding: 0.8rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--color);
+  font-size: 18px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.score p:nth-child(odd) {
+  font-weight: 700;
+}
+
+.score p:first-child {
+  color: hsl(224, 30%, 27%);
+}
+
+.score p {
+  color: hsl(224, 30%, 27%, 40%);
+}
+
+.button {
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button {
+  appearance: none;
+  border: unset;
+}
+
+.button:hover,
+.button:focus {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    padding: 0.8rem;
+  }
+}
